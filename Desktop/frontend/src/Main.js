@@ -6,7 +6,7 @@ import ParentFolderButton from "./ParentFolderButton";
 import  {ItemTree} from "./ItemTree"
 
 let data;
-// localStorage.clear()
+localStorage.clear()
 if (localStorage.getItem('Data') === null) {
     data = new ItemTree();
 } 

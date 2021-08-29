@@ -1,6 +1,6 @@
 import React from 'react';
 import pic5 from './images/close.png';
-
+let a=0;
 class NameItemModal extends React.Component {
     constructor(props) {
         super(props);
@@ -10,33 +10,36 @@ class NameItemModal extends React.Component {
             duplicate:0
             
         };
-        this.spanClick = this.spanClick.bind(this);
-        this.submit = this.submit.bind(this);
-        this.change = this.change.bind(this);
+        this.SpanClick = this.SpanClick.bind(this);
+        this.Submit = this.Submit.bind(this);
+        this.Change = this.Change.bind(this);
     }
 
-    spanClick() {
+    SpanClick() {
+        a=0;
         this.props.closeModal();
     }
 
-    submit(e) {
-        let a=this.props.onClick(this.state.submitValue, this.state.type);
+    Submit(e) {
+      
+       a =this.props.onClick(this.state.submitValue, this.state.type);
         if(a===0)
         {
-            this.spanClick();
+            this.SpanClick();
         }
         e.preventDefault();
     }
 
-    change(e) {
+    Change(e) {
         this.setState({submitValue: e.target.value})
     }
 
-    typeHandler=(val)=>{
+    typer=(val)=>{
         this.setState({type:val})
     }
 
     render() {     
+        let type = this.state.type;
         let content= [];
         let left ={width:'4rem',padding:"3px 0",outline:'none',color:'white',border: "1px solid #ccc",
                     borderRadius:"5px 0 0 5px",borderRight:"none",backgroundColor:"#50b9fd"}
@@ -62,23 +65,24 @@ class NameItemModal extends React.Component {
             let key=this.state.type
             const placeholderVal="Enter  Name";
             let col="1px solid";
-            if(this.props.samename)
+        //    / console.log(this.props.samename)
+            if(a==1)
             { 
                 col="1px solid red";
             }
             content.push( <input className="input1" style={{border:col}} key={key} placeholder={placeholderVal} 
-                            value={this.state.submitValue} onChange={this.change}/>)
-            if(this.props.samename)
+                            value={this.state.submitValue} onChange={this.Change}/>)
+            if(a==1)
             {
                 content.push(<p className="text4">File / Folder name already exists</p>)
             }
-            content.push(<button className="submitButton1" key={"createButton"}  onClick={this.submit}>Rename</button>)
+            content.push(<button className="submitButton1" key={"createButton"}  onClick={this.Submit}>Rename</button>)
      
             let modal=(
             <div  className="Modal" style={{float:'left'}}>
                 <div key={"header"}>
                     <p> Rename </p>
-                    <img className="close1" src={pic5} alt="" onClick={this.spanClick}/>
+                    <img className="close1" src={pic5} alt="" onClick={this.SpanClick}/>
                 </div>
                  {content}
             </div>)
@@ -86,28 +90,28 @@ class NameItemModal extends React.Component {
         }
          
         let key=this.state.type
-        content.push(<div  key={"typeHandler"} className="flex1">        
-                        <button style={ left } onClick={()=>this.typeHandler("file")}>File</button>
-                        <button style={ right} onClick={()=>this.typeHandler("Folder")}>Folder</button>
+        content.push(<div  key={"typer"} className="flex1">        
+                        <button style={ left } onClick={()=>this.typer("file")}>File</button>
+                        <button style={ right} onClick={()=>this.typer("Folder")}>Folder</button>
                     </div>)       
         const placeholderVal="Enter "+key.charAt(0).toUpperCase()+key.slice(1)+" Name";
         let col="1px solid";
-        if(this.props.samename)
+        if(a==1)
         {     
             col="1px solid red";
         }
         content.push( <input className="input1" style={{border:col}} key={key} placeholder={placeholderVal}
-                            value={this.state.submitValue} onChange={this.change}/>)
-        if(this.props.samename)
+                            value={this.state.submitValue} onChange={this.Change}/>)
+        if(a==1)
         {
             content.push(<p className="text5">File / Folder name already exists</p>)
         }
-        content.push(<button className="submitButton1" key={"createButton"} onClick={this.submit}>Create</button>)
+        content.push(<button className="submitButton1" key={"createButton"} onClick={this.Submit}>Create</button>)
 
         let modal=(
         <div  className="Modal">
             <div key={"header"}>
-                <img className="close1" src={pic5} alt="" onClick={this.spanClick}/>
+                <img className="close1" src={pic5} alt="" onClick={this.SpanClick}/>
                 <div><p> Create New</p></div>    
             </div>
             {content}
