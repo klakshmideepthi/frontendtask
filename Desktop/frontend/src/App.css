@@ -1,0 +1,360 @@
+html, body {
+  margin: 0;
+  height: 50vh;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  z-index: 0;
+  margin: 20px 100px;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  padding-top: 10px;
+}
+
+#last {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+}
+
+
+
+
+.files {
+  background-color: white; /* Green */
+  color: black;
+  padding-left: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 50%;
+  border-top: 1px solid;
+  border-radius: 1px;
+}
+
+.files:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+
+.files img {
+  width: 1em;
+  height: 1em;
+  float:left;
+  padding-right: 1em;
+}
+
+.files p {
+  float:left;
+
+}
+
+.img2
+{
+  width: 5rem;
+  height: 4rem;
+}
+
+.img3
+{
+  width: 4rem;
+  height: 5rem;
+  margin-left: 40px;
+}
+
+.img4
+{
+  width: 4rem;
+  height: 3rem;
+  margin:8px 0;
+}
+
+.menuButtonsCont {
+  text-align: center;
+  margin-right: 1%;
+  margin-left: 1%;
+  display: inline;
+
+}
+
+.submitButton {
+  margin: 5px;
+  padding: 10px;
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.submitButton:hover {
+  box-shadow: 0px 3px 9px darkgray;
+}
+
+
+.react-contextmenu {
+  background-color: white;
+  padding: 8px 3px;
+  width:8rem;
+  border-radius: 5px;
+  box-shadow: 0px 3px 9px darkgray;
+  z-index: 1;
+}
+
+.react-contextmenu-item {
+  background-color: white;
+  padding: 5px;
+
+
+}
+
+.react-contextmenu-item:hover {
+  background-color: rgb(207, 204, 204);
+  cursor: pointer;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 17em;
+
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content form {
+  padding-top: 5%;
+}
+
+/* The Close Button */
+.close {
+  color: aqua;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  float:right;
+  float:top;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#Item{
+  margin:5px 20px 0px 5px;
+  }
+  
+  #Item :hover{
+      background:#e7f5fe;
+  }
+
+  .AddItemContainer{
+    border: 3px dashed #c3c5c9;
+    width:50px;
+    height: 70px;
+    padding: 0;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #c3c5c9;
+    margin: 5px 0 0 15px;
+    display: inline-block;
+}
+.AddItemSign{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px ;
+}
+
+
+.Modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: auto;
+  border: 1px solid #ccc;
+  width: 16em;
+  padding: 16px;
+  left: 43%;
+  top: 30%;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media(max-width:600px){
+  .Modal{
+      left:20%
+  }
+}
+
+
+.main1
+{
+  justify-content: left;
+  border-bottom: 3px solid rgb(221, 218, 218);
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.flexcontainer1
+{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.block1
+{
+  margin: 0 40px;
+  width:5rem;
+  display: inline;
+}
+
+.close1 {
+  width: 13px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submitButton1
+  {
+    display: block;
+    background-color: #50b4fc;
+    color: #fff;
+    width:100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .submitButton1:hover {
+    box-shadow: 0px 3px 9px darkgray;
+    cursor: pointer;
+  }
+
+  .line1
+  {
+    border:1px solid gray;
+  }
+
+  .text1
+  {
+    position: relative;
+    font-size: 20px;
+    bottom:5px;
+    margin: 5px;
+  }
+
+  .text2
+  {
+    font-size: 13px;
+    word-wrap: break-word;
+  }
+
+  .text3
+  {
+    color: red;
+  }
+
+  .relative1
+  {
+    position: relative;
+  }
+
+  .spanicon
+  {
+    font-size: 10px;
+    border-radius: 5px;
+    width: auto;
+    padding: 5px;
+    margin-left: 12px;
+    margin-top: 38px;
+    background-color: red;
+    bottom:20px;
+    color: white;
+    left: 0;
+    position: absolute;
+  }
+
+  .input1
+  {
+    display: block;
+    margin: 15px 0;
+    outline: none;
+    border-radius: 5px;
+    height: 15px;
+    padding: 8px;
+    width:91%;
+  }
+
+  .text4
+  {
+    color: red;
+    font-size: 10px;
+    margin-top: -10px;
+    margin-left: -2px;
+  }
+
+  .text5
+  {
+    color: red;
+    font-size: 10px;
+    margin-top: -10px;
+    margin-left: -50px;
+  }
+
+  .float1 
+  {
+    float: left;
+  }
+
+  .flex1{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+.arrow1
+{
+  transform: rotate(-90deg);
+}
